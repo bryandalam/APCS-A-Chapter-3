@@ -5,16 +5,16 @@
 //   Creates Star patterns
 //              
 // ****************************************************************
- 
 public class Stars
 {
     public static int numStars;
     public static int numSpaces = 10 - numStars;
     public static int rowLength = 10;
-    public static int numRows = 10;
+    public static int rowNum;
     public static int currentRow = 0;
     public static String spaces = new String(" ");
     public static String stars = new String("*");
+    public static String pattern = new String("");
     public static void main(String[] args) {
         printA();
         System.out.println();
@@ -23,6 +23,8 @@ public class Stars
         printC();
         System.out.println();
         printD();
+        
+        
     }
     public static void printItem(String it, int num) {
         for (int i = 0; i < num; i++) {
@@ -33,7 +35,7 @@ public class Stars
     public static void printA() {
         int numStars = 10;
         int numSpaces = 0;
-        for (int numRows = 10; numRows >= 0; numRows--){
+        for (int numRows = 10;numRows >= 0; numRows--){
             printItem("*", numRows);
             printItem(" ", 10-numSpaces);
             numSpaces++;
@@ -44,7 +46,7 @@ public class Stars
     public static void printB() {
         int numStars = 1;
         int numSpaces = 9;
-        for (int numRows = 10; numRows >= 0; numRows--) {
+        for (int numRows = 10;numRows >= 0; numRows--) {
             if (numStars == 11) {
                 numStars = 10;
             }
